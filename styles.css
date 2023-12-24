@@ -1,0 +1,106 @@
+/* Container holding the snowflakes */
+#snowflakeContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allows clicks to pass through */
+    z-index: 99999;  /* Ensure it's above other content but might need adjustment based on your site's z-index usage */
+}
+
+/* Styling individual snowflake */
+.snowflake {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #de1d33;
+    opacity: 0.9;
+    border-radius: 50%; /* Circular snowflakes */
+    box-shadow: 0 0 10px rgb(222, 29, 51); /* Soft glow */
+
+    /* Animation */
+    animation-name: fallAndSideWays, colorChange; /* Keep the falling and swaying, add color change */
+    animation-duration: 10s, 15s; /* Different durations for movement and color change */
+    animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+
+
+}
+
+/* Animation for falling effect */
+/* Animation for falling effect */
+@keyframes fallAndSideWays {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    50% {
+        transform: translateX(20px) translateY(50vh); /* Adjust for drift and halfway down */
+    }
+    100% {
+        transform: translateX(0) translateY(100vh); /* Return to middle and bottom of the viewport */
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: #ee6041; /* Start with red */
+    }
+    50% {
+        background-color: #0ea5f8; /* Change to green halfway */
+    }
+    100% {
+        background-color: #de1d33; /* End with blue */
+    }
+}
+
+.message {
+    opacity: 0;
+    transition: opacity 2s; /* 渐变效果持续时间 */
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+.hidden {
+    display: none;
+}
+
+/* Container for the canvas and the image */
+.content {
+    text-align: center; /* Center the content for inline or inline-block elements */
+    display: flex; /* Use flexbox to structure the content */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically if there's extra space */
+}
+
+.images {
+    display: flex; /* Aligns the cat and GIF images horizontally */
+    justify-content: center; /* Centers the images horizontally */
+    align-content: center;
+}
+
+.side-gif, #catImage {
+    width: 100px; /* Adjust as necessary */
+    height: auto; /* Maintain aspect ratio */
+    display: none; /* Initially hidden, show them via JavaScript when appropriate */
+}
+
+/* Style adjustments for the canvas */
+#scene {
+    /* your existing styles for the canvas */
+    margin-bottom: 20px; /* Add space between the canvas and the image */
+}
+
+/* Style adjustments for the cat image */
+/*#catImage {*/
+/*    display: none; !* Initially hidden *!*/
+/*    width: 200px; !* Adjust width as needed *!*/
+/*    height: auto; !* Maintain aspect ratio *!*/
+/*    !* Additional centering is handled by the flex container *!*/
+/*}*/
+

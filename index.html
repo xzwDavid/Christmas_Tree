@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+<!--    <img id="catImage" src="./cat.png" alt="Cute Cat" style="display: none;">-->
+
+    <script src="index.js"></script>
+    <style>
+      * {
+          padding: 0;
+          margin: 0;
+      }
+      .source-code {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        background-color: #ff0000;
+        color: white;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: normal;
+        padding: 8px;
+        text-decoration: none;
+        border-radius: 3px;
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+  </head>
+
+  <body onload="run()" style="background:white">
+<!--    <canvas id="scene" width="500px" height="500px" style="background:white; display: block; margin: 0 auto"></canvas>-->
+<!--    <img id="catImage" src="./cat.png" alt="Cute Cat" style="display: none;">-->
+    <div class="content">
+        <canvas id="scene" width="500px" height="500px"></canvas>
+        <img src="./cat.gif" alt="First GIF" class="side-gif" style="display: none;">
+        <img id="catImage" src="./cat.png" alt="Cute Cat" style="display: none;">
+        <img src="./cat.gif" alt="Second GIF" class="side-gif" style="display: none;">
+    </div>
+    <div id="snowflakeContainer"></div>
+    <div id="greeting" style="color: red; text-align: center; font-size: 24px; opacity: 0; font-family: 'Indie Flower', cursive;"></div>
+
+
+<!--    <div id="catImage" class="hidden">[猫猫动画图片]</div>-->
+
+    <!--    <a href="https://github.com/anvaka/atree" class='source-code'>Source code</a>-->
+  </body>
+
+</html>
