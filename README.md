@@ -13,26 +13,16 @@ The tree is built of two spirals. These [11 lines of code](https://github.com/an
 
 ![spiral](http://upload.wikimedia.org/wikipedia/commons/a/a5/ComplexSinInATimeAxe.gif)
 
-It's almost perfect now
+Add Some Snowflakes !
 -----------------------
+It's all in "Snowflakecontainer!"
 
-**EDIT:** Thank you reddit. With your help we made it almost perfect. You are awesome! 
+* you can choose random color you like
+* Feel free to change the direction!
 
-Huge appreciation goes to [@CensoredUsername](https://github.com/CensoredUsername) who made [significant improvement](http://www.reddit.com/r/programming/comments/1tswai/t_sin_t_christmas_tree/cebhvu9). 
-
-[@Yazuak](https://github.com/Yazuak) first gave and implemented [idea](http://www.reddit.com/r/programming/comments/1tswai/t_sin_t_christmas_tree/cebajpt) of how to manage even distribution of points along the curves.
-
-* Vitaliy Kaurov implemented the same tree in Wolfram language... in just [15 lines of code](http://community.wolfram.com/groups/-/m/t/175891).
-* [David Librera](https://github.com/davidlibrera) rewrote this in CoffeeScript. Checkout [his repository](https://github.com/davidlibrera/atree/tree/master/js/coffee) for nice OO design. 
-* Chris Warren-Smith [wrote it in SmallBASIC](https://gist.github.com/chrisws/3cf97b7b7f1c2d6f9741464a2dfb3c3b)
-* Mike Mallin made it [available in C](https://github.com/mremallin/christmas_tree) using SDL2 and OpenGL 3.2
-* SFML port by [@deniskropp](https://github.com/deniskropp) is available here: https://github.com/deniskropp/christmas_tree
-
-
-So, what's left? Just small changes which could make this tree perfect:
-
-* Shadows are not accurate
-* I think code is more complex than it should be (subjectively).
+Add Some Images !
+-----------------------
+See more details in index.html
 
 # Happy Holidays!
 
