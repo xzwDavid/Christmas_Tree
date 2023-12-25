@@ -245,7 +245,7 @@ function displayMessages() {
             // Add some delay before starting the next message to prevent flickering
             setTimeout(displayNextMessage, 1000);
           } else {
-            // setTimeout(greeting.innerText = "To XiaoChi\n"+"I hope you can always be as warm as the sun to those around you.\n"+"Merry Christmas\n"+"Best, Zhongwei\n",5000)
+            
             // After all messages have been displayed, show them together for a while
             greeting.innerText = messages.join("\n");
             fadeIn(greeting,300); // Apply your fadeIn effect
