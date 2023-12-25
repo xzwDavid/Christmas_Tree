@@ -224,10 +224,9 @@ function fadeOut(element, duration, callback) {
 
 function displayMessages() {
   const messages = [
-    "To XiaoChi",
-    "I hope you can always be as warm as the sun to those around you.",
+    "To XXX",
     "Merry Christmas",
-    "Best, Zhongwei"
+    "Best, XXX"
   ];
 
   let greeting = document.getElementById('greeting');
@@ -236,11 +235,11 @@ function displayMessages() {
   function displayNextMessage() {
     if (messageIndex < messages.length) {
       greeting.innerText = messages[messageIndex]; // Change the text
-      fadeIn(greeting, 1000); // Fade in (duration is proportional to increment)
+      fadeIn(greeting, 100); // Fade in (duration is proportional to increment)
 
       // Wait for the text to stay visible for a bit before fading out
       setTimeout(() => {
-        fadeOut(greeting, 1000, () => {
+        fadeOut(greeting, 100, () => {
           messageIndex++;
           if(messageIndex < messages.length) {
             // Add some delay before starting the next message to prevent flickering
@@ -249,7 +248,7 @@ function displayMessages() {
             // setTimeout(greeting.innerText = "To XiaoChi\n"+"I hope you can always be as warm as the sun to those around you.\n"+"Merry Christmas\n"+"Best, Zhongwei\n",5000)
             // After all messages have been displayed, show them together for a while
             greeting.innerText = messages.join("\n");
-            fadeIn(greeting,1000); // Apply your fadeIn effect
+            fadeIn(greeting,300); // Apply your fadeIn effect
             setTimeout(() => {
               let catImage = document.getElementById('catImage');
               let sideGifs = document.querySelectorAll('.side-gif');
@@ -258,12 +257,12 @@ function displayMessages() {
               });
               greeting.style.display = 'none'; // Hide the text
               catImage.style.display = 'block'; // Show the cat image
-              fadeIn(catImage,1000); // Apply your fadeIn effect to cat image
-            }, 2000); // Adjust time as needed
+              fadeIn(catImage,100); // Apply your fadeIn effect to cat image
+            }, 15000); // Adjust time as needed
 
           }
         });
-      }, 1000); // Start over after a brief pause
+      }, 3000); // Start over after a brief pause
     }
   }
 
